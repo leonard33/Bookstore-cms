@@ -32,7 +32,7 @@ a {
   display: flex;
   flex: 1;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .logo-name {
@@ -45,7 +45,7 @@ a {
 .left {
   display: flex;
   flex: 1;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   font-size: 18px;
 }

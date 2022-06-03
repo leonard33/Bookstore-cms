@@ -19,7 +19,7 @@ const Nav = () => {
           <Link className="lang" to="bookstore">
             <li>Books</li>
           </Link>
-          <Link className="lang" to="bookstore">
+          <Link className="lang" to="categories">
             <li>CATEGORIES</li>
           </Link>
         </ul>
