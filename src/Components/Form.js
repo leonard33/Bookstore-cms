@@ -8,9 +8,9 @@ const Form = () => {
       <div className="form">
         <input type="text" placeholder="BOOK TITLE" />
         <input type="text" placeholder="AUTHOR" />
-        <a className="btn-submit" input type="button">
+        <button className="btn-submit" type="submit">
           ADD BOOK
-        </a>
+        </button>
       </div>
     </div>
   );

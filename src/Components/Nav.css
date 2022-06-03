@@ -51,6 +51,10 @@ a {
 }
 
 .menu-list {
+  align-items: center;
+}
+
+.menu-list {
   list-style-type: none;
   display: flex;
 }

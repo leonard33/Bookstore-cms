@@ -2,6 +2,7 @@ import React from "react";
 import { FaUserAlt } from "react-icons/fa";
 import "./Nav.css";
 import booklibrary from "../assets/booklibrary.png";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const favicon = { color: "blue", size: "50px" };
@@ -11,14 +12,16 @@ const Nav = () => {
         <div className="logo">
           <img src={booklibrary} />
         </div>
-        <div className="logo-name">Bookstore CMS</div>
         <ul className="menu-list">
-          <li>
-            <a href="#">BOOKS</a>
-          </li>
-          <li>
-            <a href="#">CATEGORIES</a>
-          </li>
+          <Link className="lang" to="/">
+            <li className="logo-name">Bookstore CMS</li>
+          </Link>
+          <Link className="lang" to="bookstore">
+            <li>Books</li>
+          </Link>
+          <Link className="lang" to="bookstore">
+            <li>CATEGORIES</li>
+          </Link>
         </ul>
       </div>
       <div className="notification">
