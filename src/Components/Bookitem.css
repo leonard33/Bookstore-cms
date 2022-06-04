@@ -1,0 +1,120 @@
+.item-container {
+  display: flex;
+  margin: auto;
+  padding: 20px;
+  width: 90vw;
+  margin-bottom: 10px;
+  border: 1px solid rgb(211, 208, 208);
+  justify-content: space-between;
+}
+
+.book-details {
+  flex: 1;
+  max-width: 30rem;
+  overflow-wrap: break-word;
+}
+
+.book-title {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.genre {
+  font-size: 14px;
+  font-weight: 700;
+  color: rgb(161, 156, 156);
+}
+
+.author {
+  color: #6495ed;
+}
+
+.action {
+  display: flex;
+  width: 13rem;
+  justify-content: space-between;
+}
+
+.remove {
+  border-left: 1px solid #6495ed;
+  border-right: 1px solid #6495ed;
+  padding: 0 7px;
+}
+
+.book-details > div {
+  margin: 5px 0;
+}
+
+.number {
+  font-size: 24px;
+}
+
+.percentage-detail {
+  font-size: 14px;
+  color: rgb(161, 156, 156);
+}
+
+.action > div {
+  cursor: pointer;
+  color: #598ef1;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.status > div {
+  margin: 0 10px;
+}
+
+.progress {
+  margin: 5px 0;
+}
+
+.btn-progress {
+  display: flex;
+  border: 1px solid #6495ed;
+  width: 200px;
+  height: 30px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 700;
+  background-color: #6495ed;
+}
+
+.btn-add {
+  display: flex;
+  border: 1px solid #6495ed;
+  width: 200px;
+  height: 30px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 700;
+  background-color: #6495ed;
+}
+
+.current-chapter {
+  color: gray;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.progress > div {
+  margin-bottom: 10px;
+}
+
+.number-chapter {
+  font-size: 14px;
+}
+
+.item-container:hover {
+  border: 1px solid #6495ed;
+}

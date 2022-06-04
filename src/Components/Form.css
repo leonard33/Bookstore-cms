@@ -1,0 +1,38 @@
+.btn-submit {
+  display: flex;
+  border: 1px solid blue;
+  width: 200px;
+  height: 30px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 700;
+  background-color: blue;
+}
+
+input {
+  width: 20rem;
+  height: 30px;
+}
+
+input:nth-child(1) {
+  flex: 1;
+  max-width: 40rem;
+}
+
+.form {
+  display: flex;
+  width: 93vw;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-title {
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: gray;
+}
