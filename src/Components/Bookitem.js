@@ -5,9 +5,8 @@ import { useDispatch } from "react-redux";
 import { deletedata } from "../redux/books/books";
 // import { v4 as uuidv4 } from "uuid";
 
-const Bookitem = ({ id, title, author, genre, chapter, book }) => {
+const Bookitem = ({ title, author, genre, chapter, book }) => {
   const dispatch = useDispatch();
-  // const books = useSelector((state) => state.bookReducer);
 
   const deletehandler = () => {
     dispatch(deletedata(book.id));

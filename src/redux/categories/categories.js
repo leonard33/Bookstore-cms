@@ -1,20 +1,16 @@
 const CHECK_STATUS = "bookstore-cms/books/CHECK_STATUS";
 
-const initialState = {
-  checkstatus: [],
-};
-
-const categoriesReducers = (state = initialState, action) => {
+const categoriesReducer = (state = [], action) => {
   switch (action.type) {
     case CHECK_STATUS:
       return "Under construction";
     default:
-      state;
+      return state;
   }
 };
-
+// action creator
 export const checkstatus = () => ({
   type: CHECK_STATUS,
 });
 
-export default categoriesReducers;
+export default categoriesReducer;

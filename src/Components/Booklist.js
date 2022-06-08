@@ -6,7 +6,6 @@ import Form from "./Form";
 
 const Booklist = () => {
   const books = useSelector((state) => state.bookReducer);
-  console.log(books, "initial state books");
 
   return (
     <div className="booklist">
