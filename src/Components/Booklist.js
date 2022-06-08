@@ -1,32 +1,13 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import Bookitem from "./Bookitem";
 import "./Booklist.css";
 import Form from "./Form";
 
 const Booklist = () => {
-  const books = [
-    {
-      id: 1,
-      genre: "Action",
-      title: "The Hunger Games",
-      author: "Suzzane Collins",
-      chapter: "Chapter 17",
-    },
-    {
-      id: 2,
-      genre: "Science Fiction",
-      title: "Dune",
-      author: "Frank Herbert",
-      chapter: "Chapter 3: Lesson learned",
-    },
-    {
-      id: 3,
-      genre: "Economy",
-      title: "Chapter 3: Lesson learned",
-      author: "Frank Herbert",
-      chapter: "Introduction",
-    },
-  ];
+  const books = useSelector((state) => state.bookReducer);
+  console.log(books, "initial state books");
+
   return (
     <div className="booklist">
       <ul>
@@ -35,8 +16,9 @@ const Booklist = () => {
             <Bookitem
               key={book.id}
               genre={book.genre}
-              booktitle={book.booktitle}
+              booktitle={book.title}
               author={book.author}
+              book={book}
               chapter={book.chapter}
             />
           ))}

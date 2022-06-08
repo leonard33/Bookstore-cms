@@ -1,26 +1,40 @@
-import React from "react";
+import bookdetail from "../../Components/booksdata";
 
-const CREATE = "bookstore-cms/widgets/CREATE";
-const REMOVE = "bookstore-cms/widgets/REMOVE";
+const CREATE_BOOK = "bookstore-cms/books/CREATE_BOOK";
+const REMOVE_BOOK = "bookstore-cms/books/REMOVE_BOOK";
 
-const initialState = {
-  books: [],
-};
-
-const bookReducer = (state = initialState, action) => {
+const bookReducer = (state = bookdetail, action) => {
+  console.log(bookdetail, "from bookdata");
   switch (action.type) {
-    case "CREATE":
-      return {
-        ...state,
-        books: [...state.books, action.payload],
-      };
-    case "REMOVE":
-      return {
-        ...state.books.filter((book) => book !== action.payload),
-      };
+    case CREATE_BOOK:
+      return [...state, action.payload];
+    case REMOVE_BOOK:
+      return [...state.filter((e) => e.id !== action.payload.id)];
     default:
       return state;
   }
 };
 
+// action creator
+export const createdata = (id, title, author) => ({
+  type: CREATE_BOOK,
+  payload: {
+    id,
+    title,
+    author,
+  },
+});
+
+export const deletedata = (id) => ({
+  type: REMOVE_BOOK,
+  payload: {
+    id,
+  },
+});
+
 export default bookReducer;
+
+/*[
+  ...state.slice(0, action.index),
+  ...state.slice(action.index + 1, state.length)
+]; */

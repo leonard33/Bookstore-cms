@@ -1,5 +1,4 @@
-import React from "react";
-const CHECK_STATUS = "bookstore-cms/widgets/CHECK_STATUS";
+const CHECK_STATUS = "bookstore-cms/books/CHECK_STATUS";
 
 const initialState = {
   checkstatus: [],
@@ -7,11 +6,15 @@ const initialState = {
 
 const categoriesReducers = (state = initialState, action) => {
   switch (action.type) {
-    case "CHECK_STATUS":
+    case CHECK_STATUS:
       return "Under construction";
     default:
       state;
   }
 };
+
+export const checkstatus = () => ({
+  type: CHECK_STATUS,
+});
 
 export default categoriesReducers;

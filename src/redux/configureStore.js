@@ -1,11 +1,17 @@
-import React from "react";
-import { createStore, combineReducers } from "react-redux";
+import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
+import { combineReducers } from "redux";
 import bookReducer from "./books/books";
 import categoriesReducers from "./categories/categories";
 
 const rootReducer = combineReducers({
-  bookReducer,
-  categoriesReducers,
+  bookReducer: bookReducer,
+  // categoriesReducers: categoriesReducers,
 });
 
-const store = createStore(rootReducer);
+const store = configureStore({
+  reducer: rootReducer,
+  middleware: getDefaultMiddleware({
+    serializableCheck: false,
+  }),
+});
+export default store;
