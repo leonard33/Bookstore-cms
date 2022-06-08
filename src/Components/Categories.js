@@ -6,9 +6,10 @@ import { checkstatus } from "../redux/categories/categories";
 
 const Categories = () => {
   const categories = useSelector((state) => state.categoriesReducer);
+  console.log(categories);
   const dispatch = useDispatch();
   const statushandler = () => {
-    dispatch(checkstatus);
+    dispatch(checkstatus());
   };
 
   return (
@@ -16,6 +17,7 @@ const Categories = () => {
       <button type="button" className="btn-progress" onClick={statushandler}>
         Check status
       </button>
+      <div>{categories}</div>
     </div>
   );
 };
