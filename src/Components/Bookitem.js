@@ -1,11 +1,9 @@
 import React from "react";
 import "./Bookitem.css";
-import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { deletedata } from "../redux/books/books";
-// import { v4 as uuidv4 } from "uuid";
 
-const Bookitem = ({ title, author, genre, chapter, book }) => {
+const Bookitem = ({ booktitle, author, genre, chapter, book }) => {
   const dispatch = useDispatch();
 
   const deletehandler = () => {
@@ -16,7 +14,7 @@ const Bookitem = ({ title, author, genre, chapter, book }) => {
     <div className="item-container">
       <div className="book-details">
         <div className="genre">{genre}</div>
-        <div className="book-title">{title} </div>
+        <div className="book-title">{booktitle} </div>
         <div className="author">{author}</div>
         <div className="action">
           <div className="comment">comments</div>
