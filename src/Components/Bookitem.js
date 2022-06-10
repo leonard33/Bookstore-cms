@@ -2,6 +2,7 @@ import React from "react";
 import "./Bookitem.css";
 import { useDispatch } from "react-redux";
 import { removeBook } from "../redux/books/books";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 const Bookitem = ({ booktitle, author, category, chapter, id }) => {
   const dispatch = useDispatch();
@@ -24,10 +25,14 @@ const Bookitem = ({ booktitle, author, category, chapter, id }) => {
           <div className="edit">edit</div>
         </div>
       </div>
-      <div className="status">
-        <a type="button" className="btn-progress">
-          Check status
-        </a>
+      <div className="middle-progress">
+        <div className="icon-percent">
+          <AiOutlineLoading3Quarters size={50} />
+        </div>
+        <div className="status">
+          <div className="number">60%</div>
+          <div className="complete">completed</div>
+        </div>
       </div>
       <div className="progress">
         <div className="current-chapter">CURRENT CHAPTER</div>
