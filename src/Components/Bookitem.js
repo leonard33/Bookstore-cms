@@ -1,19 +1,19 @@
 import React from "react";
 import "./Bookitem.css";
 import { useDispatch } from "react-redux";
-import { deletedata } from "../redux/books/books";
+import { removeBook } from "../redux/books/books";
 
-const Bookitem = ({ booktitle, author, genre, chapter, book }) => {
+const Bookitem = ({ booktitle, author, category, chapter, id }) => {
   const dispatch = useDispatch();
 
   const deletehandler = () => {
-    dispatch(deletedata(book.id));
+    dispatch(removeBook(id));
   };
 
   return (
     <div className="item-container">
       <div className="book-details">
-        <div className="genre">{genre}</div>
+        <div className="genre">{category}</div>
         <div className="book-title">{booktitle} </div>
         <div className="author">{author}</div>
         <div className="action">

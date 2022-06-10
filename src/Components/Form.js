@@ -9,17 +9,20 @@ const Form = () => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
+  const [category, setCategory] = useState("");
 
   const booktitle = (e) => setTitle(e.target.value);
   const bookauthor = (e) => setAuthor(e.target.value);
+  const bookcategory = (e) => setCategory(e.target.value);
 
   const onsubmithandler = (e) => {
     e.preventDefault();
-    if (title && author) {
-      dispatch(createdata(uuidv4(), title, author));
+    if (title && author && category) {
+      dispatch(createdata(uuidv4(), title, author, category));
     }
     setTitle("");
     setAuthor("");
+    setCategory("");
   };
 
   return (
@@ -37,6 +40,12 @@ const Form = () => {
           type="text"
           placeholder="AUTHOR"
           onChange={bookauthor}
+        />
+        <input
+          value={category}
+          type="text"
+          placeholder="category"
+          onChange={bookcategory}
         />
         <button className="btn-submit" type="submit" onClick={onsubmithandler}>
           ADD BOOK
