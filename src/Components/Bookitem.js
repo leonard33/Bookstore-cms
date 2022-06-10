@@ -1,7 +1,15 @@
 import React from "react";
 import "./Bookitem.css";
+import { useDispatch } from "react-redux";
+import { deletedata } from "../redux/books/books";
 
-const Bookitem = ({ booktitle, author, genre, chapter }) => {
+const Bookitem = ({ booktitle, author, genre, chapter, book }) => {
+  const dispatch = useDispatch();
+
+  const deletehandler = () => {
+    dispatch(deletedata(book.id));
+  };
+
   return (
     <div className="item-container">
       <div className="book-details">
@@ -10,7 +18,9 @@ const Bookitem = ({ booktitle, author, genre, chapter }) => {
         <div className="author">{author}</div>
         <div className="action">
           <div className="comment">comments</div>
-          <div className="remove">remove</div>
+          <div className="remove" onClick={deletehandler}>
+            remove
+          </div>
           <div className="edit">edit</div>
         </div>
       </div>
