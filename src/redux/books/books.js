@@ -17,7 +17,6 @@ const bookReducer = (state = [], action) => {
 };
 
 // Action creators
-
 //add data to api
 export const craetedata = (data) => {
   return {
@@ -30,16 +29,7 @@ export const craetedata = (data) => {
     },
   };
 };
-/*
-// delete data 
-export const deletedata = (id) => {
-  return {
-    type: REMOVE_BOOK,
-    payload: {
-      id,
-    },
-  };
-};*/
+
 // delete from api direct
 export const removeBook = (id) => {
   return (dispatch) => {
@@ -78,7 +68,7 @@ export function createdata(item_id, title, author, category) {
           category,
         }),
       }
-    ); //.then(() => dispatch());
+    );
   };
 }
 
@@ -91,6 +81,5 @@ export const fetchData = () => (dispatch) => {
     .then((response) => response.json())
     .then((json) => dispatch(showBook(json)));
 };
-console.log(fetchData);
 
 export default bookReducer;
