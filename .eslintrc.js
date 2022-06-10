@@ -17,6 +17,10 @@ module.exports = {
     },
     ecmaVersion: "latest",
     sourceType: "module",
+    env: {
+      es6: true,
+      node: true,
+    },
   },
   plugins: ["react"],
   rules: {
