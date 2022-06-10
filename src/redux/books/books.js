@@ -17,6 +17,7 @@ const bookReducer = (state = [], action) => {
 };
 
 // Action creators
+
 //add data to api
 export const craetedata = (data) => {
   return {
@@ -68,7 +69,7 @@ export function createdata(item_id, title, author, category) {
           category,
         }),
       }
-    );
+    ).then(() => dispatch(fetchData()));
   };
 }
 
