@@ -9,7 +9,7 @@ This is a book store project.
 - React
 
 ## Live Demo 
-[Todo List App](https://github.com/leonard33/Bookstore-cms.git)
+[Bookstore App](https://github.com/leonard33/Bookstore-cms.git)
 
 
 ## Getting Started
