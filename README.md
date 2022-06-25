@@ -9,7 +9,7 @@ This is a book store project.
 - React
 
 ## Live Demo 
-[Bookstore App](https://github.com/leonard33/Bookstore-cms.git)
+[Bookstore App](https://62b6f3f7e2b0766a8c3ddde0--velvety-toffee-e99976.netlify.app/)
 
 
 ## Getting Started
